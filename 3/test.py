@@ -1,6 +1,6 @@
 import unittest
 
-from functions import identify_item, convert_item_to_priority
+from functions import identify_item, convert_item_to_priority, find_item_in_common
 
 class TestSolution(unittest.TestCase):
 
@@ -18,6 +18,9 @@ class TestSolution(unittest.TestCase):
         self.assertEqual(convert_item_to_priority('A'), 27, "Should be 27")
         self.assertEqual(convert_item_to_priority('Z'), 52, "Should be 52")
     
+    def test_find_item_in_common(self):
+        self.assertEqual(find_item_in_common(['vJrwpWtwJgWrhcsFMMfFFhFp','jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL','PmmdzqPrVvPwwTWBwg']), 'r', "Should be r")
+        self.assertEqual(find_item_in_common(['wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn','ttgJtRGJQctTZtZT','CrZsJsPPZsGzwwsLwLmpwMDw']), 'Z', "Should be Z")
         
 
 if __name__ == '__main__':

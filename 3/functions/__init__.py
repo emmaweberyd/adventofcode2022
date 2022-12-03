@@ -10,3 +10,7 @@ def convert_item_to_priority(item):
         return ord(item) - 96
     else: 
         return ord(item) - 38
+
+def find_item_in_common(group_items):
+    return list(set(group_items[0]).intersection(group_items[1]).intersection(group_items[2]))[0]
+    
