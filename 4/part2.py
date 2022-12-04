@@ -6,6 +6,6 @@ if __name__ == "__main__":
     
     count = 0
     for line in lines:
-        if assignments_fully_overlap(line):
+        if assignments_overlap(line):
             count += 1
     print(count)
